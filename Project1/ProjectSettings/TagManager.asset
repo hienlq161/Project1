@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Rocket
   - AlphaJump
+  - Friendly
+  - BlackHole
+  - ForceRadius
   layers:
   - Default
   - TransparentFX
