@@ -14,7 +14,7 @@ public class RocketMovement : MonoBehaviour{
         rigidbodyComponent = GetComponent<Rigidbody2D>();
         isMovingEnable = false;
     }
-    private void Update() {
+    private void FixedUpdate() {
         MovingRocket();
     }
 
@@ -30,8 +30,8 @@ public class RocketMovement : MonoBehaviour{
         isMovingEnable = true;
     }
     void MovingRocket() {
-        if (isMovingEnable == false) return;
-        Vector2 movingDirection = new Vector2(movementSpeed * Time.deltaTime, 0);
+        //if (isMovingEnable == false) return;
+        Vector2 movingDirection = new Vector2(0, movementSpeed * Time.deltaTime);
         rigidbodyComponent.AddRelativeForce(movingDirection);
     }
 }
