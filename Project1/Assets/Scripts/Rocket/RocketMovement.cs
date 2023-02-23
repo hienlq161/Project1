@@ -8,7 +8,7 @@ public class RocketMovement : MonoBehaviour{
 
     Rigidbody2D rigidbodyComponent;
 
-    bool isMovingEnable = false;
+    bool isMovingEnable;
 
     private void Start() {
         rigidbodyComponent = GetComponent<Rigidbody2D>();

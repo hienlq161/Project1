@@ -160,3 +160,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 3
+  shrinkRate: {x: 0.1, y: 0.1, z: 0.1}
