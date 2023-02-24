@@ -14,12 +14,12 @@ public class ButtonBeheviour : MonoBehaviour, IPointerEnterHandler, IPointerExit
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        //        anim.SetTrigger("hover");
+        anim.SetTrigger("Highlighted");
        
     }
     public void OnPointerExit(PointerEventData eventData)
     {
-      //  anim.SetBool("hover", false);
+      
     }
    
 }

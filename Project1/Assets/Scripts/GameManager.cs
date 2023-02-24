@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    GameObject UiLevel;
+    [SerializeField] GameObject UiLevel;
     bool isPauseGame;
-    private void Awake()
+    private void Start()
     {
-        UiLevel = GameObject.FindGameObjectWithTag("UIInLevel");
+    
         DontDestroyOnLoad(gameObject);
         isPauseGame = false;
     }
@@ -17,6 +17,10 @@ public class GameManager : MonoBehaviour
     {
 
         SceneManager.LoadScene("Level0");
+    }
+    public void SelectLevel()
+    {
+        SceneManager.LoadScene("LevelScene");
     }
     private void Update()
     {
