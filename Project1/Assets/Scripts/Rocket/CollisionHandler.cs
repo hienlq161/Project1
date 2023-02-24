@@ -18,10 +18,6 @@ public class CollisionHandler : MonoBehaviour{
             NextLevelSequence();
             return;
         }
-        if (collision.gameObject.CompareTag("BlackHole")) {
-            DestroyedByBlackHole();
-            return;
-        }
         // ship got destroy
     }
 
@@ -36,11 +32,5 @@ public class CollisionHandler : MonoBehaviour{
             // end of all level, congrat player(s)
         }
         SceneManager.LoadSceneAsync(currentSceneIndex + 1);
-    }
-    
-    void DestroyedByBlackHole() {
-        // some methods to shrink the object
-        Destroy(this.gameObject, delayTime);
-    }
-    
+    }    
 }
