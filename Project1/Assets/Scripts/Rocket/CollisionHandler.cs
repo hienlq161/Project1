@@ -25,7 +25,8 @@ public class CollisionHandler : MonoBehaviour{
         //Implement animation and other stuff
         Invoke(nameof(LoadNextLevel), delayTime);
     }
-    void LoadNextLevel() {
+    void LoadNextLevel() 
+    {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) {
