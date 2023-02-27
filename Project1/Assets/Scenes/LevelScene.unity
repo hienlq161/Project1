@@ -235,6 +235,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5742537866177769551, guid: 422300c1a08e52b4e906db17c6c991c8, type: 3}
   m_PrefabInstance: {fileID: 19964375}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &704565601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1483121712071410953, guid: 422300c1a08e52b4e906db17c6c991c8, type: 3}
+  m_PrefabInstance: {fileID: 5742537866319281718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ff9ae74e117d64cb98cf498654d46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &945009638
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +412,71 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1184525518
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3323931800595714982, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_Name
+      value: SoundSystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -70.89254
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715001, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3323931800595715001, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
 --- !u!1001 &1422541411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -785,6 +861,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1874438468}
     m_Modifications:
+    - target: {fileID: 5742537866177769548, guid: 422300c1a08e52b4e906db17c6c991c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 704565601}
+    - target: {fileID: 5742537866177769548, guid: 422300c1a08e52b4e906db17c6c991c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LvSelect
+      objectReference: {fileID: 0}
     - target: {fileID: 5742537866177769550, guid: 422300c1a08e52b4e906db17c6c991c8, type: 3}
       propertyPath: m_Name
       value: SelectLv0
