@@ -20,6 +20,15 @@ public class CollisionHandler : MonoBehaviour{
         }
         // ship got destroy
     }
+    //Va cham voi sao bang
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("SaoBang"))
+        {
+            
+            GameManager.instance.GameOver();
+         }
+    }
 
     void NextLevelSequence() {
         //Implement animation and other stuff
