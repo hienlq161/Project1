@@ -5,19 +5,29 @@ public class UIManager : MonoBehaviour
 {
   //  [SerializeField] private GameObject gameOverScreen;
    // [SerializeField] private AudioClip gameOverSound;
-        private GameObject pauseGameScreen;
- 
-    public void GameOver()
+         GameObject pauseGameScreen;
+    public static UIManager instance { get; private set; }
+    private void Awake()
     {
-    //   gameOverScreen.SetActive(true);
-
+        instance = this;
     }
+    
    
     private void Start()
     {
         pauseGameScreen = GameObject.FindGameObjectWithTag("UIInLevel");
         pauseGameScreen.SetActive(false);
 
+    }
+    public void GameOverFame()
+    {
+        pauseGameScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
     public void PlayerPause()
     {

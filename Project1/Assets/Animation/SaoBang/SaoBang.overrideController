@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SaoBang
+  m_Controller: {fileID: 9100000, guid: f2d7ecb345137fb4e8224b1422599089, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: a2621100a1d4a7e4ea65e87c8c3129c3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f4ee26b029f9c314a948df817a97359c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f3c86aac6fa82be4596591af2c25d3f0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 60a896a15ffd2ca4f9d69195482461b0, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 70222ea011262084dba459934efbb41c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e172e518365e60041b4073418f2c305c, type: 2}

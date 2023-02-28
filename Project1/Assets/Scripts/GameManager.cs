@@ -7,9 +7,10 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject UiLevel;
     bool isPauseGame;
+    public static GameManager instance { get; private set; }
     private void Start()
     {
-    
+        instance = this;
         DontDestroyOnLoad(gameObject);
         isPauseGame = false;
     }
@@ -21,6 +22,12 @@ public class GameManager : MonoBehaviour
     public void SelectLevel()
     {
         SceneManager.LoadScene("LevelScene");
+    }
+    public void GameOver()
+    {
+        
+        UIManager.instance.GameOverFame();
+   
     }
     private void Update()
     {
