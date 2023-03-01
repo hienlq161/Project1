@@ -5,14 +5,20 @@ using UnityEngine;
 public class RocketMovement : MonoBehaviour{
 
     [SerializeField] float movementSpeed = 100f;
+    Animator animatorComponent;
 
     Rigidbody2D rigidbodyComponent;
 
     bool isMovingEnable;
 
+
+    private void Awake() {
+        animatorComponent = GetComponent<Animator>();
+    }
     private void Start() {
         rigidbodyComponent = GetComponent<Rigidbody2D>();
         isMovingEnable = false;
+        animatorComponent.SetBool("isMoving", false);
     }
     private void FixedUpdate() {
         MovingRocket();
@@ -30,7 +36,8 @@ public class RocketMovement : MonoBehaviour{
         isMovingEnable = true;
     }
     void MovingRocket() {
-        //if (isMovingEnable == false) return;
+        if (isMovingEnable == false) return;
+        animatorComponent.SetBool("isMoving", true);
         Vector2 movingDirection = new Vector2(0, movementSpeed * Time.deltaTime);
         rigidbodyComponent.AddRelativeForce(movingDirection);
     }

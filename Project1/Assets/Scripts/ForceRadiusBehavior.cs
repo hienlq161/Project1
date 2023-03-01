@@ -10,7 +10,26 @@ public class ForceRadiusBehavior : MonoBehaviour{
 
     [SerializeField] Transform coreTransform;
 
+    bool isStartingSequence;
+
+    private void Start() {
+        isStartingSequence = false;
+    }
+    private void OnEnable() {
+        EventManager.StartSequence += EnableSequence;
+    }
+    private void OnDisable() {
+        EventManager.StartSequence -= EnableSequence;
+    }
+
+    void EnableSequence() {
+        isStartingSequence = true;
+    }
+
     private void OnTriggerStay2D(Collider2D collision) {
+        if (isStartingSequence == false) {
+            return;
+        }
         if (collision.CompareTag("BlackHole")) {
             return;
         }

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8100262337299886174}
   - component: {fileID: 8100262337299886175}
   - component: {fileID: 8100262337299886173}
+  - component: {fileID: 1290328124}
+  - component: {fileID: 1290328125}
+  - component: {fileID: 1290328131}
   m_Layer: 0
   m_Name: Black Hole Core
   m_TagString: BlackHole
@@ -94,12 +97,51 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &1290328124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100262337299886168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852abd668d3352d45b7391d85bdf1210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 8100262338097282562}
+--- !u!114 &1290328125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100262337299886168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a062c5767f09c44bb8f4081b437326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1290328131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100262337299886168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57e6b0ad09ad2264dbb1ae6c045b78eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shrinkRate: {x: 0.1, y: 0.1, z: 0}
+  delayTime: 2
 --- !u!1 &8100262338097282588
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,6 +154,8 @@ GameObject:
   - component: {fileID: 8100262338097282563}
   - component: {fileID: 8100262338097282561}
   - component: {fileID: 8574806914883743997}
+  - component: {fileID: 1290328122}
+  - component: {fileID: 1290328123}
   m_Layer: 0
   m_Name: Centripetal Force Radius
   m_TagString: Friendly
@@ -215,7 +259,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attractiveForce: 80
   dragAmount: 0.7
+  rotationSpeed: 30
   coreTransform: {fileID: 8100262337299886174}
+--- !u!114 &1290328122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100262338097282588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 852abd668d3352d45b7391d85bdf1210, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 8100262337299886174}
+--- !u!114 &1290328123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100262338097282588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00a062c5767f09c44bb8f4081b437326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8100262338227406911
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +295,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8100262338227406910}
-  - component: {fileID: 1192742771489690506}
   m_Layer: 0
   m_Name: Black Hole
   m_TagString: Friendly
@@ -249,15 +318,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1192742771489690506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8100262338227406911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00a062c5767f09c44bb8f4081b437326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

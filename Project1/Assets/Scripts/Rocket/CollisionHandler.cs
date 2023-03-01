@@ -5,37 +5,50 @@ using UnityEngine.SceneManagement;
 public class CollisionHandler : MonoBehaviour{
 
     [SerializeField] float delayTime = 2f;
-    [SerializeField] Vector3 shrinkRate = new Vector3(0.1f, 0.1f, 0.1f);
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("Friendly")) {
-            return;
-        }
-        if (collision.gameObject.CompareTag("FroceRadius")) {
-            return;
-        }
-        if (collision.gameObject.CompareTag("AlphaJump")) {
-            NextLevelSequence();
-            return;
-        }
-        // ship got destroy
+    SpriteRenderer spriteRendererComponent;
+
+    Vector3 rocketScreenPosition;
+    bool isOffScreen;
+
+    private void Start() {
+        spriteRendererComponent = GetComponent<SpriteRenderer>();
     }
-    //Va cham voi sao bang
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("SaoBang"))
-        {
-            
-            GameManager.instance.GameOver();
-         }
+
+    private void Update() {
+        rocketScreenPosition = Camera.main.WorldToScreenPoint(this.transform.position);
+        isOffScreen = rocketScreenPosition.x >= Screen.width || rocketScreenPosition.y >= Screen.height;
+
+        if (isOffScreen) {
+            DestroyShip();
+        }
+    }
+
+    //private void OnTriggerEnter2D(Collider2D collision) {
+    //    if (collision.gameObject.CompareTag("Friendly")) {
+    //        return;
+    //    }
+    //    if (collision.gameObject.CompareTag("FroceRadius")) {
+    //        return;
+    //    }
+    //    if (collision.gameObject.CompareTag("AlphaJump")) {
+    //        NextLevelSequence();
+    //        return;
+    //    }
+    //    DestroyShip();
+    //}
+
+    private void OnCollisionEnter2D(Collision2D collision){
+        if (collision.collider.CompareTag("SaoBang")){
+            DestroyShip();
+        }
     }
 
     void NextLevelSequence() {
         //Implement animation and other stuff
         Invoke(nameof(LoadNextLevel), delayTime);
     }
-    void LoadNextLevel() 
-    {
+    void LoadNextLevel() {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) {
@@ -43,4 +56,12 @@ public class CollisionHandler : MonoBehaviour{
         }
         SceneManager.LoadSceneAsync(currentSceneIndex + 1);
     }    
+
+    void DestroyShip() {
+        spriteRendererComponent.enabled = false;
+        Invoke(nameof(CallGameOver), delayTime);
+    }
+    void CallGameOver() {
+        GameManager.instance.GameOver();
+    }
 }

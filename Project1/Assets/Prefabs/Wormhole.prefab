@@ -95,6 +95,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7182461105013338874, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: m_Size.x
+      value: 1.144158
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182461105013338874, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: m_Size.y
+      value: 0.961913
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182461105013338874, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.009352764
+      objectReference: {fileID: 0}
+    - target: {fileID: 7182461105013338874, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.023892371
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362244148436663430, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 8362244148436663430, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.013
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
 --- !u!1 &9009166524707380744 stripped
@@ -119,6 +143,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1189415218471860961}
     m_Modifications:
+    - target: {fileID: 885362539250932946, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011106154905309870, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1639037
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011106154905309870, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_Size.y
+      value: 0.97121626
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011106154905309870, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0031746412
+      objectReference: {fileID: 0}
+    - target: {fileID: 2011106154905309870, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.024853341
+      objectReference: {fileID: 0}
     - target: {fileID: 6268442714184648540, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
       propertyPath: m_Name
       value: WormholeIn
@@ -128,12 +172,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6268442714184648542, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0973
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268442714184648542, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5971324
+      objectReference: {fileID: 0}
+    - target: {fileID: 6268442714184648542, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.99
+      value: -3.74
       objectReference: {fileID: 0}
     - target: {fileID: 6268442714184648542, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.468
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6268442714184648542, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
       propertyPath: m_LocalPosition.z
