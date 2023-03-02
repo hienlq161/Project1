@@ -39,7 +39,7 @@ public class CollisionHandler : MonoBehaviour{
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.collider.CompareTag("SaoBang")){
+        if (collision.collider.CompareTag("SaoBang") || collision.collider.CompareTag("ThienThach") ){
             DestroyShip();
         }
     }
