@@ -24,19 +24,19 @@ public class CollisionHandler : MonoBehaviour{
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision) {
-    //    if (collision.gameObject.CompareTag("Friendly")) {
-    //        return;
-    //    }
-    //    if (collision.gameObject.CompareTag("FroceRadius")) {
-    //        return;
-    //    }
-    //    if (collision.gameObject.CompareTag("AlphaJump")) {
-    //        NextLevelSequence();
-    //        return;
-    //    }
-    //    DestroyShip();
-    //}
+    private void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("Friendly")) {
+            return;
+        }
+        if (collision.gameObject.CompareTag("ForceRadius")) {
+            return;
+        }
+        if (collision.gameObject.CompareTag("AlphaJump")) {
+            NextLevelSequence();
+            return;
+        }
+        DestroyShip();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision){
         if (collision.collider.CompareTag("SaoBang")){

@@ -140,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e6b0ad09ad2264dbb1ae6c045b78eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrinkRate: {x: 0.1, y: 0.1, z: 0}
   delayTime: 2
 --- !u!1 &8100262338097282588
 GameObject:
@@ -158,7 +157,7 @@ GameObject:
   - component: {fileID: 1290328123}
   m_Layer: 0
   m_Name: Centripetal Force Radius
-  m_TagString: Friendly
+  m_TagString: ForceRadius
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

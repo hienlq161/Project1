@@ -13,6 +13,9 @@ public class BlackHole : MonoBehaviour{
         if (collision.gameObject.CompareTag("AlphaJump")) {
             return;
         }
+        if (collision.gameObject.CompareTag("ForceRadius")) {
+            return;
+        }
 
         Destroy(collision.gameObject);
         //play some kind of animation
