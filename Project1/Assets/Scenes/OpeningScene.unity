@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &164647009 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5649370972676306966, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
-  m_PrefabInstance: {fileID: 1707308627}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &249492376
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,9 +489,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 164647009}
+      - m_Target: {fileID: 1707308628}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: StartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -847,6 +842,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+--- !u!114 &1707308628 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5608875123418510500, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+  m_PrefabInstance: {fileID: 1707308627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c855bb91cc5f86f4aa83bf360e45bdd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1740148670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1123,9 +1129,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 164647009}
+      - m_Target: {fileID: 1707308628}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: SelectLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

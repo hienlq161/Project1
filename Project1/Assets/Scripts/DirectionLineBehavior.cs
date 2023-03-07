@@ -9,10 +9,6 @@ public class DirectionLineBehavior : MonoBehaviour{
     private void OnDisable() {
         EventManager.StartSequence -= DisableLine;
     }
-    private void Update()
-    {
-        
-    }
     void DisableLine() {
         Destroy(gameObject);
     }

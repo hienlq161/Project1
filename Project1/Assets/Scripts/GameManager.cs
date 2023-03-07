@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
 
-        SceneManager.LoadScene("Level0");
+        SceneManager.LoadScene("Level 0");
     }
     public void SelectLevel()
     {

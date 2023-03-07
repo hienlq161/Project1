@@ -16,7 +16,7 @@ public class LevelSelect : MonoBehaviour, IPointerEnterHandler
     public void LvSelect()
     {
        
-       if (!isLocked) SceneManager.LoadScene("Level" + numberLv.ToString());
+       if (!isLocked) SceneManager.LoadScene("Level " + numberLv.ToString());
        
 
     }
