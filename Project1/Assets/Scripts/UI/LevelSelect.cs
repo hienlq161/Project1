@@ -7,16 +7,15 @@ public class LevelSelect : MonoBehaviour, IPointerEnterHandler
     [SerializeField] int numberLv;
     [SerializeField] public AudioClip click;
     private bool isLocked;
-    Color color;
-    private void Awake()
-    {
-        color = GetComponent<Image>().color;
-    }
-   
+  
     public void LvSelect()
     {
-       
-       if (!isLocked) SceneManager.LoadScene("Level " + numberLv.ToString());
+
+        if (!isLocked)
+        {
+            SceneManager.LoadScene("Level " + numberLv.ToString());
+            Time.timeScale = 1;
+        }
        
 
     }
