@@ -10,12 +10,18 @@ public class CollisionHandler : MonoBehaviour{
 
     Vector3 rocketScreenPosition;
     bool isOffScreen;
+    bool isTransitioning;
 
     private void Start() {
         spriteRendererComponent = GetComponent<SpriteRenderer>();
+        isTransitioning = false;
     }
 
     private void Update() {
+        if (isTransitioning) {
+            return;
+        }
+
         rocketScreenPosition = Camera.main.WorldToScreenPoint(this.transform.position);
         isOffScreen = rocketScreenPosition.x >= Screen.width || rocketScreenPosition.y >= Screen.height;
 
@@ -25,6 +31,9 @@ public class CollisionHandler : MonoBehaviour{
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        if (isTransitioning) {
+            return;
+        }
         if (collision.gameObject.CompareTag("Friendly")) {
             return;
         }
@@ -39,13 +48,18 @@ public class CollisionHandler : MonoBehaviour{
     }
 
     private void OnCollisionEnter2D(Collision2D collision){
-        if (collision.collider.CompareTag("SaoBang")){
-            DestroyShip();
+        if (isTransitioning) {
+            return;
         }
+        //if (collision.collider.CompareTag("SaoBang")){
+        //    DestroyShip();
+        //}
+        DestroyShip();
     }
 
     void NextLevelSequence() {
         //Implement animation and other stuff
+        isTransitioning = true;
         Invoke(nameof(LoadNextLevel), delayTime);
     }
     void LoadNextLevel() {
