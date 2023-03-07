@@ -46,6 +46,9 @@ public class CollisionHandler : MonoBehaviour{
 
     void NextLevelSequence() {
         //Implement animation and other stuff
+        LevelSelectControl.instance.UnLockLevel(SceneManager.GetActiveScene().buildIndex);
+        LevelSelectControl.instance.lockLv = SceneManager.GetActiveScene().buildIndex + 1;
+        print(SceneManager.GetActiveScene().buildIndex);
         Invoke(nameof(LoadNextLevel), delayTime);
     }
     void LoadNextLevel() {

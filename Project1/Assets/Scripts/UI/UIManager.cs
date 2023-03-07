@@ -9,7 +9,11 @@ public class UIManager : MonoBehaviour
     public static UIManager instance { get; private set; }
     private void Awake()
     {
-        instance = this;
+        if (instance != null && instance != this)
+        {
+            Destroy(this);
+        }
+        else instance = this;
     }
     
    
@@ -17,7 +21,7 @@ public class UIManager : MonoBehaviour
     {
         pauseGameScreen = GameObject.FindGameObjectWithTag("UIInLevel");
         pauseGameScreen.SetActive(false);
-
+        
     }
     public void GameOverFame()
     {
