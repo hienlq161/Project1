@@ -6,20 +6,21 @@ public class LevelSelectControl : MonoBehaviour
 {
     public static LevelSelectControl instance { get; private set; }
     [SerializeField] List<GameObject> lv;
-    public int lockLv; 
+    public static int lockLv = 2; 
     private void Awake()
     {
         if (instance != null && instance != this) Destroy(this);
-        instance = this;
-        lockLv = 2;
-        print(lockLv);
-        UnLockLevel(1);
-        //lock from lv 3
+        else instance = this;
+        
+        //lock from lv lockLv
         for (int i = lockLv; i <= lv.Count; i++)
         {
             lv[i - 1].GetComponent<LevelSelect>().Lock();
         }
-
+        for (int i = 1; i < lockLv; i++)
+        {
+            UnLockLevel(i);
+        }
     }
     private void Start()
     {

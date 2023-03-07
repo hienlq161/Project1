@@ -321,6 +321,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4330562316466884099, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+      propertyPath: lockLv
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330562316466884099, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+      propertyPath: lv.Array.data[0]
+      value: 
+      objectReference: {fileID: 294632596}
+    - target: {fileID: 4330562316466884099, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+      propertyPath: lv.Array.data[1]
+      value: 
+      objectReference: {fileID: 1324380508}
+    - target: {fileID: 4330562316466884099, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+      propertyPath: lv.Array.data[2]
+      value: 
+      objectReference: {fileID: 548442500}
+    - target: {fileID: 4330562316466884099, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+      propertyPath: lv.Array.data[3]
+      value: 
+      objectReference: {fileID: 569443707}
     - target: {fileID: 5608875123418510500, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
       propertyPath: UiLevel
       value: 

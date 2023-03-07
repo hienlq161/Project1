@@ -68,6 +68,8 @@ public class CollisionHandler : MonoBehaviour{
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) {
             // end of all level, congrat player(s)
         }
+        print(currentSceneIndex);
+        if (LevelSelectControl.lockLv < currentSceneIndex) LevelSelectControl.lockLv++;
         SceneManager.LoadSceneAsync(currentSceneIndex + 1);
     }    
 

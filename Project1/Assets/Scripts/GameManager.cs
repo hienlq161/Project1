@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject UiLevel;
     bool isPauseGame;
     public static GameManager instance { get; private set; }
     private void Start()
