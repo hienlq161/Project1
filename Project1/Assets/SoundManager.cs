@@ -10,9 +10,10 @@ public class SoundManager : MonoBehaviour
     void Awake()
     {
         audi = GetComponent<AudioSource>();
+        if (Instance != null && Instance != this) Destroy(this);
         Instance = this;
     }
-
+    
     public void PlaySound(AudioClip _sound)
     {
         audi.PlayOneShot(_sound);

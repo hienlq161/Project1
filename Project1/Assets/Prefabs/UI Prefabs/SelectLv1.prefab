@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberLv: 0
   click: {fileID: 8300000, guid: 695692d46536305499cbe29d1fb22f44, type: 3}
+  isLocked: 0
 --- !u!1 &5742537867626219723
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,7 +207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.08282302, g: 0.9339623, b: 0.5367639, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

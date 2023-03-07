@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,8 +9,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance { get; private set; }
     private void Start()
     {
-        instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (instance != null && instance != this) Destroy(this);
+        else instance = this;
         isPauseGame = false;
     }
     public void StartGame()
@@ -34,12 +33,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (!isPauseGame) {
-                UiLevel.GetComponent<UIManager>().PlayerPause();
+                UIManager.instance.PlayerPause();
                 isPauseGame = true;
             }
             else
             {
-                UiLevel.GetComponent<UIManager>().Continue();
+                UIManager.instance.Continue();
                 isPauseGame = false;
             }
         }

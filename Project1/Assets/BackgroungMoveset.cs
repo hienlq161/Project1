@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class BackgroungMoveset : MonoBehaviour
 {
-    [SerializeField] Transform leTren;
-    [SerializeField] Transform leDuoi;
     [SerializeField] float speed;
-    Vector3 oldPos;
     private Transform trans;
-    bool moveDown;
+    public float timmer;
+    float counter;
+    float dir;
     private void Awake()
     {
         trans = GetComponent<Transform>();
-        oldPos = trans.position;
+        dir = 1;
        
     }
     private void Update()
     {
         
-        if (trans.position.y < leTren.position.y) trans.Translate(new Vector3(0f, speed * Time.deltaTime, 0f));
-        else
+      
+            trans.Rotate(new Vector3(0, 0, speed * Time.deltaTime));
+        trans.Translate(new Vector3(0, dir * speed / 10 * Time.deltaTime));
+            if (counter > timmer)
         {
-            new WaitForEndOfFrame();
-            trans.position = oldPos ;
-             
+            dir = -dir;
+            counter = 0;
         }
+        counter += Time.deltaTime;
+     
         
     }
     
