@@ -5,9 +5,9 @@ using UnityEngine.UI;
 using TMPro;
 
 public class EventManager : MonoBehaviour{
-    [SerializeField] int numberOfBlackHole;
 
-    
+    [SerializeField] int numberOfBlackHole;
+ 
     [SerializeField] TextMeshProUGUI blackHoleNumberText;
     [SerializeField] GameObject blackHoleRadius;
     [SerializeField] Animator iconAnimation;
@@ -16,8 +16,6 @@ public class EventManager : MonoBehaviour{
 
     public delegate void StartButton();
     public static event StartButton StartSequence;
-
-
 
     private void Start() {
         UpdateText(numberOfBlackHole);

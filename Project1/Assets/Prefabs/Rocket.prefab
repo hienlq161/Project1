@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delayTime: 1.7
+  explosion: {fileID: 4670803841757245970, guid: 0d737884ce8ec914eacc5cbd2bd87b62, type: 3}
 --- !u!95 &1155138143355631632
 Animator:
   serializedVersion: 3

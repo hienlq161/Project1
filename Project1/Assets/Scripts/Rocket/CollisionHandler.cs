@@ -6,6 +6,7 @@ public class CollisionHandler : MonoBehaviour{
 
     [SerializeField] float delayTime = 2f;
 
+    [SerializeField] GameObject explosion;
     SpriteRenderer spriteRendererComponent;
 
     Vector3 rocketScreenPosition;
@@ -51,6 +52,9 @@ public class CollisionHandler : MonoBehaviour{
         if (isTransitioning) {
             return;
         }
+        if (collision.gameObject.CompareTag("BlackHole")) {
+            return;
+        }
         //if (collision.collider.CompareTag("SaoBang")){
         //    DestroyShip();
         //}
@@ -58,7 +62,7 @@ public class CollisionHandler : MonoBehaviour{
     }
 
     void NextLevelSequence() {
-        //Implement animation and other stuff
+        
         isTransitioning = true;
         Invoke(nameof(LoadNextLevel), delayTime);
     }
@@ -74,6 +78,9 @@ public class CollisionHandler : MonoBehaviour{
     }    
 
     void DestroyShip() {
+        if (!isOffScreen) {
+        Instantiate(explosion, this.transform.position, Quaternion.identity);
+        }
         spriteRendererComponent.enabled = false;
         Invoke(nameof(CallGameOver), delayTime);
     }
