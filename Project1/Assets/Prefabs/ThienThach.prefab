@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 1263166113554289731}
   - component: {fileID: 1263166113554289730}
   - component: {fileID: 1263166113554289733}
+  - component: {fileID: 1002364168023874529}
+  - component: {fileID: 6120981003389694004}
   m_Layer: 0
   m_Name: ThienThach
-  m_TagString: Untagged
+  m_TagString: ThienThach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1508178241
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b3b1c325b77f3cc4ea3873efb54d724c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,6 +98,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fcdaecb5957aed4f828d71bdea88e61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  momenXoayTrucZ: 20
+  momenXoayTrucZ: 10
   speed: 0.2
-  dir: {x: 0.84, y: 1.7}
+  dir: {x: 1.44, y: 2.06}
+--- !u!70 &1002364168023874529
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263166113554289732}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000059604645, y: -0.003728062}
+  m_Size: {x: 0.40824354, y: 0.475349}
+  m_Direction: 0
+--- !u!95 &6120981003389694004
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263166113554289732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13de2492032aa7e49800b77fbe0d7300, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
