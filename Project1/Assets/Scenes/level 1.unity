@@ -1079,6 +1079,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 126664816}
     - target: {fileID: 991637721, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
+      propertyPath: numberOfBlackHole
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 991637721, guid: d1e16414ada36024e9b521012341ed7d, type: 3}
       propertyPath: blackHoleNumberText
       value: 
       objectReference: {fileID: 1204071740}

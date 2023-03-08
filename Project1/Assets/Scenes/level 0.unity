@@ -1368,14 +1368,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 270.46
       objectReference: {fileID: 0}
-    - target: {fileID: 7751286500263245075, guid: 36934e7d444998340aa794577ae27b0f, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7751286500263245075, guid: 36934e7d444998340aa794577ae27b0f, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1508178241
-      objectReference: {fileID: 0}
     - target: {fileID: 7751286500263245086, guid: 36934e7d444998340aa794577ae27b0f, type: 3}
       propertyPath: m_Name
       value: Rocket

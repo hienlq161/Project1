@@ -57,7 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fbe092fafd9da64db3c747cedff80da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfBlackHole: 2
+  numberOfBlackHole: 1
   blackHoleNumberText: {fileID: 0}
   blackHoleRadius: {fileID: 5986501238301407618, guid: ceb64ecf38a775747b70265a46c18ed8, type: 3}
   iconAnimation: {fileID: 0}

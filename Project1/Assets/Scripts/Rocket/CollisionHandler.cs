@@ -7,7 +7,9 @@ public class CollisionHandler : MonoBehaviour{
     [SerializeField] float delayTime = 2f;
 
     [SerializeField] GameObject explosion;
+    [SerializeField] AudioClip explosionAudio;
     SpriteRenderer spriteRendererComponent;
+    AudioSource audioSourceComponent;
 
     Vector3 rocketScreenPosition;
     bool isOffScreen;
@@ -15,6 +17,7 @@ public class CollisionHandler : MonoBehaviour{
 
     private void Start() {
         spriteRendererComponent = GetComponent<SpriteRenderer>();
+        audioSourceComponent = GetComponent<AudioSource>();
         isTransitioning = false;
     }
 
@@ -62,7 +65,6 @@ public class CollisionHandler : MonoBehaviour{
     }
 
     void NextLevelSequence() {
-        
         isTransitioning = true;
         Invoke(nameof(LoadNextLevel), delayTime);
     }
@@ -71,17 +73,24 @@ public class CollisionHandler : MonoBehaviour{
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) {
             // end of all level, congrat player(s)
+            SceneManager.LoadSceneAsync("level 0");
+            return;
         }
         print(currentSceneIndex);
         if (LevelSelectControl.lockLv < currentSceneIndex) LevelSelectControl.lockLv++;
-        SceneManager.LoadSceneAsync(currentSceneIndex + 1);
+        SceneManager.LoadSceneAsync(nextSceneIndex);
     }    
 
     void DestroyShip() {
+        if (isTransitioning) {
+            return;
+        }
         if (!isOffScreen) {
-        Instantiate(explosion, this.transform.position, Quaternion.identity);
+            Instantiate(explosion, this.transform.position, Quaternion.identity);
+            audioSourceComponent.PlayOneShot(explosionAudio);
         }
         spriteRendererComponent.enabled = false;
+        isTransitioning = true;
         Invoke(nameof(CallGameOver), delayTime);
     }
     void CallGameOver() {
