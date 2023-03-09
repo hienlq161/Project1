@@ -10,14 +10,18 @@ public class SaoBang : MonoBehaviour
     Vector3 shot;
     Vector3 dir; 
     float goc;
+    Animator anim;
 
     [Header("Random Initiate")]
     [SerializeField] Vector2 randomRange;
     [SerializeField] Vector2 randomPoint;
 
     bool isStartingSequence;
-    
-   
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void Start()
     {
         isStartingSequence = false;
@@ -55,11 +59,14 @@ public class SaoBang : MonoBehaviour
     //Di chuyen object toi target da tinh toan
     public void Move(Transform obj, float _speed)
     {
-        if (Mathf.Abs(goc) > 0)
+        Vector3 nor = shot;
+        nor.Normalize();
+        if (shot != Vector3.zero)
         {
-            Quaternion rotate = Quaternion.LookRotation(Vector3.forward, dir);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotate, _speed * Time.deltaTime / 2); ;
+            float angle = goc * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle + 60, Vector3.forward);
         }
+        
         obj.transform.Translate(shot * _speed * Time.deltaTime, relativeTo: Space.World);
     }
     private void OnDrawGizmos()
@@ -73,5 +80,16 @@ public class SaoBang : MonoBehaviour
         float x = Random.Range(randomPoint.x - randomRange.x / 2, randomPoint.x + randomRange.x / 2);
         float y = Random.Range(randomPoint.y - randomRange.y / 2, randomPoint.y + randomRange.y / 2);
         return new Vector2(x, y);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Rocket") || collision.collider.CompareTag("Planet")) 
+        {
+            anim.SetTrigger("explore"); 
+        }
+    }
+    void Explore()
+    {
+        gameObject.SetActive(false);
     }
 }
