@@ -9,12 +9,13 @@ public class CollisionHandler : MonoBehaviour{
     [SerializeField] GameObject explosion;
     [SerializeField] AudioClip explosionAudio;
     [SerializeField] AudioClip alphaJumpAudio;
+    [SerializeField] AudioClip offScreenAudio;
     SpriteRenderer spriteRendererComponent;
     AudioSource audioSourceComponent;
 
     Vector3 rocketScreenPosition;
     bool isOffScreen;
-    bool isTransitioning;
+    public bool isTransitioning;
 
     private void Start() {
         spriteRendererComponent = GetComponent<SpriteRenderer>();
@@ -87,7 +88,9 @@ public class CollisionHandler : MonoBehaviour{
         if (isTransitioning) {
             return;
         }
-        if (!isOffScreen) {
+        if (isOffScreen) {
+            audioSourceComponent.PlayOneShot(offScreenAudio);
+        } else {
             Instantiate(explosion, this.transform.position, Quaternion.identity);
             audioSourceComponent.PlayOneShot(explosionAudio);
         }

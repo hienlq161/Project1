@@ -5218,9 +5218,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff7f6f08e59bb0247a12cd6bdbb67d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attractiveForce: 80
+  attractiveForce: 70
   dragAmount: 0.7
-  rotationSpeed: 30
+  rotationSpeed: 40
   coreTransform: {fileID: 8100262337299886174}
 --- !u!114 &1290328122
 MonoBehaviour:

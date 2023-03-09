@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d5bee317396de468834b46621e356f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 80
+  movementSpeed: 65
 --- !u!114 &7751286500263245076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +139,8 @@ MonoBehaviour:
   explosion: {fileID: 4670803841757245970, guid: 0d737884ce8ec914eacc5cbd2bd87b62, type: 3}
   explosionAudio: {fileID: 8300000, guid: c8cd17e516c60664ab846f2fc3e8a72e, type: 3}
   alphaJumpAudio: {fileID: 8300000, guid: 0695d83673e54fa48bb1eddff28dedd3, type: 3}
+  offScreenAudio: {fileID: 8300000, guid: 532d9619cf5dd5e40b5bec2540c98848, type: 3}
+  isTransitioning: 0
 --- !u!95 &1155138143355631632
 Animator:
   serializedVersion: 3

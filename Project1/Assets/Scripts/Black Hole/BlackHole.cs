@@ -7,6 +7,7 @@ public class BlackHole : MonoBehaviour{
     [SerializeField] float delayTime = 2f;
 
     [SerializeField] AudioClip destroyContact;
+    //[SerializeField] CollisionHandler collisionScript;
     AudioSource audioSourceComponent;
 
     private void Start() {
@@ -23,7 +24,9 @@ public class BlackHole : MonoBehaviour{
         if (collision.gameObject.CompareTag("ForceRadius")) {
             return;
         }
-
+        if (collision.gameObject.TryGetComponent<CollisionHandler>(out CollisionHandler collisionScript)) {
+            if (collisionScript.isTransitioning) return;
+        }
         Destroy(collision.gameObject);
         audioSourceComponent.PlayOneShot(destroyContact, 0.5f);
         //play some kind of animation

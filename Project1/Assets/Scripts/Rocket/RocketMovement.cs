@@ -5,8 +5,8 @@ using UnityEngine;
 public class RocketMovement : MonoBehaviour{
 
     [SerializeField] float movementSpeed = 100f;
-    Animator animatorComponent;
 
+    Animator animatorComponent;
     Rigidbody2D rigidbodyComponent;
 
     bool isMovingEnable;
