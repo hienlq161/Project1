@@ -138,6 +138,7 @@ MonoBehaviour:
   delayTime: 1.7
   explosion: {fileID: 4670803841757245970, guid: 0d737884ce8ec914eacc5cbd2bd87b62, type: 3}
   explosionAudio: {fileID: 8300000, guid: c8cd17e516c60664ab846f2fc3e8a72e, type: 3}
+  alphaJumpAudio: {fileID: 8300000, guid: 0695d83673e54fa48bb1eddff28dedd3, type: 3}
 --- !u!95 &1155138143355631632
 Animator:
   serializedVersion: 3

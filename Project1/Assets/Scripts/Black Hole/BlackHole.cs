@@ -6,6 +6,13 @@ public class BlackHole : MonoBehaviour{
 
     [SerializeField] float delayTime = 2f;
 
+    [SerializeField] AudioClip destroyContact;
+    AudioSource audioSourceComponent;
+
+    private void Start() {
+        audioSourceComponent = GetComponent<AudioSource>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.CompareTag("Friendly")) {
             return;
@@ -18,6 +25,7 @@ public class BlackHole : MonoBehaviour{
         }
 
         Destroy(collision.gameObject);
+        audioSourceComponent.PlayOneShot(destroyContact, 0.5f);
         //play some kind of animation
         if (collision.gameObject.CompareTag("Rocket")) {
             Invoke(nameof(TriggerGameOver), delayTime);

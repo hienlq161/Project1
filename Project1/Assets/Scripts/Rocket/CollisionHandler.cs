@@ -8,6 +8,7 @@ public class CollisionHandler : MonoBehaviour{
 
     [SerializeField] GameObject explosion;
     [SerializeField] AudioClip explosionAudio;
+    [SerializeField] AudioClip alphaJumpAudio;
     SpriteRenderer spriteRendererComponent;
     AudioSource audioSourceComponent;
 
@@ -66,6 +67,7 @@ public class CollisionHandler : MonoBehaviour{
 
     void NextLevelSequence() {
         isTransitioning = true;
+        audioSourceComponent.PlayOneShot(alphaJumpAudio);
         Invoke(nameof(LoadNextLevel), delayTime);
     }
     void LoadNextLevel() {
