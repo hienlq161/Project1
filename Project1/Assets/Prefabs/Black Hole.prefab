@@ -5220,7 +5220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attractiveForce: 70
   dragAmount: 0.7
-  rotationSpeed: 40
+  rotationSpeed: 45
   coreTransform: {fileID: 8100262337299886174}
 --- !u!114 &1290328122
 MonoBehaviour:

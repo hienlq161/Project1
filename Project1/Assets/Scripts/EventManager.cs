@@ -7,12 +7,13 @@ using TMPro;
 public class EventManager : MonoBehaviour{
 
     [SerializeField] int numberOfBlackHole;
- 
+
     [SerializeField] TextMeshProUGUI blackHoleNumberText;
     [SerializeField] GameObject blackHoleRadius;
     [SerializeField] Animator iconAnimation;
     [SerializeField] Button startSequenceButton;
     [SerializeField] Button spawnButton;
+    
 
     public delegate void StartButton();
     public static event StartButton StartSequence;
