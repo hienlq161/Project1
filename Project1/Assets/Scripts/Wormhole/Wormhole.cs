@@ -8,14 +8,10 @@ public class Wormhole : MonoBehaviour
 
     [SerializeField] private Transform otherHole;
     [SerializeField] private GameObject congkia;
+    GameObject rocket;
     private void Awake()
     {
-     
-        
-    }
-    private void Update()
-    {
-       
+        rocket = GameObject.FindGameObjectWithTag("Rocket");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -40,6 +36,8 @@ public class Wormhole : MonoBehaviour
     {
         
         item.position = otherHole.position;
+        float sig = otherHole.position.x - congkia.transform.position.x;
+        if (rocket.GetComponent<Rigidbody2D>().velocity.x * sig < 0) rocket.GetComponent<Rigidbody2D>().velocity *= new Vector3(-1,1,1);
         item.GetComponent<Animator>().SetTrigger("appear");
     }
     IEnumerator delay(float sec, Transform other)

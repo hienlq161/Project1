@@ -10,6 +10,7 @@ public class cloneSaoBang : MonoBehaviour
     {
         saoBang = GameObject.FindGameObjectWithTag("SaoBang");
         transform.position = saoBang.transform.position;
+        transform.rotation = saoBang.transform.rotation;
     }
 
     void Update()
