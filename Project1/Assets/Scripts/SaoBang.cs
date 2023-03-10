@@ -11,7 +11,9 @@ public class SaoBang : MonoBehaviour
     Vector3 dir; 
     float goc;
     Animator anim;
-
+    float timmer;
+    float counter;
+    public float randomDelayAttack = 2;
     [Header("Random Initiate")]
     [SerializeField] Vector2 randomRange;
     [SerializeField] Vector2 randomPoint;
@@ -34,6 +36,7 @@ public class SaoBang : MonoBehaviour
         shot = shot - transform.position;
         goc = Mathf.Atan2(shot.y, shot.x);
         dir = new Vector3(Mathf.Cos(goc), Mathf.Sin(goc));
+        timmer = RandomTimmer();
     }
 
     private void OnEnable() {
@@ -54,7 +57,11 @@ public class SaoBang : MonoBehaviour
          
             return;
         }
-        Move(gameObject.transform, speed);
+        if (counter >= timmer)
+        {
+            Move(gameObject.transform, speed);
+        }
+        else counter += Time.deltaTime;
     }
     //Di chuyen object toi target da tinh toan
     public void Move(Transform obj, float _speed)
@@ -91,5 +98,9 @@ public class SaoBang : MonoBehaviour
     void Explore()
     {
         gameObject.SetActive(false);
+    }
+    float RandomTimmer()
+    {
+        return Random.Range(1, randomDelayAttack);
     }
 }
