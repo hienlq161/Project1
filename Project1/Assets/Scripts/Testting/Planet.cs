@@ -3,6 +3,7 @@ using UnityEngine;
 public class Planet : MonoBehaviour
 {
     [SerializeField] float momentXoay;
+    [SerializeField] public AudioClip planeExplore;
     Animator anim;
     private void Awake()
     {
@@ -16,8 +17,10 @@ public class Planet : MonoBehaviour
     {
         if (collision.collider.CompareTag("SaoBang"))
         {
+            SoundManager.Instance.PlaySound(planeExplore);
             anim.SetTrigger("explore");
         }
+      
     }
     void Explore()
     {
