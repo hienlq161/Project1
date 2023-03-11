@@ -60,9 +60,6 @@ public class CollisionHandler : MonoBehaviour{
         if (collision.gameObject.CompareTag("BlackHole")) {
             return;
         }
-        //if (collision.collider.CompareTag("SaoBang")){
-        //    DestroyShip();
-        //}
         DestroyShip();
     }
 
