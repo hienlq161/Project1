@@ -47,6 +47,10 @@ PrefabInstance:
       propertyPath: otherHole
       value: 
       objectReference: {fileID: 7733794737963891807}
+    - target: {fileID: 1950142709040740788, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
+      propertyPath: intoWormHole
+      value: 
+      objectReference: {fileID: 8300000, guid: dcb609aaef7d4764eb6da7dd95879cd2, type: 3}
     - target: {fileID: 3366479587692652296, guid: bf31423711e2ba54fb5fedab8e39c968, type: 3}
       propertyPath: m_Name
       value: WormholeOut
@@ -203,6 +207,10 @@ PrefabInstance:
       propertyPath: otherHole
       value: 
       objectReference: {fileID: 2860479411388925318}
+    - target: {fileID: 7157790188333849056, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
+      propertyPath: intoWormHole
+      value: 
+      objectReference: {fileID: 8300000, guid: dcb609aaef7d4764eb6da7dd95879cd2, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b608c354ec692429ffce5b2ff7bb63, type: 3}
 --- !u!1 &3595982124051507153 stripped
