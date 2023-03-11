@@ -50,6 +50,9 @@ public class CollisionHandler : MonoBehaviour{
             NextLevelSequence();
             return;
         }
+        if (collision.gameObject.CompareTag("BlackHole")) {
+            return;
+        }
         DestroyShip();
     }
 

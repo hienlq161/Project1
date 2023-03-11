@@ -8,6 +8,7 @@ public class RocketMovement : MonoBehaviour{
 
     Animator animatorComponent;
     Rigidbody2D rigidbodyComponent;
+    CapsuleCollider2D colliderComponent;
 
     bool isMovingEnable;
 
@@ -17,6 +18,7 @@ public class RocketMovement : MonoBehaviour{
     }
     private void Start() {
         rigidbodyComponent = GetComponent<Rigidbody2D>();
+        colliderComponent = GetComponent<CapsuleCollider2D>();
         isMovingEnable = false;
         animatorComponent.SetBool("isMoving", false);
     }
@@ -36,7 +38,11 @@ public class RocketMovement : MonoBehaviour{
         isMovingEnable = true;
     }
     void MovingRocket() {
-        if (isMovingEnable == false) return;
+        if (isMovingEnable == false) {
+            colliderComponent.isTrigger = true;
+            return;
+        }
+        colliderComponent.isTrigger = false;
         animatorComponent.SetBool("isMoving", true);
         Vector2 movingDirection = new Vector2(0, movementSpeed * Time.deltaTime);
         rigidbodyComponent.AddRelativeForce(movingDirection);

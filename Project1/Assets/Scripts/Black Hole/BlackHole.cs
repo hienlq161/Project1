@@ -38,6 +38,35 @@ public class BlackHole : MonoBehaviour{
         if (collision.gameObject.CompareTag("ForceRadius")) {
             return;
         }
+        if (collision.gameObject.CompareTag("Planet")) {
+            return;
+        }
+        if (collision.gameObject.TryGetComponent<CollisionHandler>(out CollisionHandler collisionScript)) {
+            if (collisionScript.isTransitioning) return;
+        }
+        Destroy(collision.gameObject);
+        audioSourceComponent.PlayOneShot(destroyContact, 0.5f);
+        //play some kind of animation
+        if (collision.gameObject.CompareTag("Rocket")) {
+            Invoke(nameof(TriggerGameOver), delayTime);
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision) {
+        if (isStartingSequence == false) {
+            return;
+        }
+        if (collision.gameObject.CompareTag("Friendly")) {
+            return;
+        }
+        if (collision.gameObject.CompareTag("AlphaJump")) {
+            return;
+        }
+        if (collision.gameObject.CompareTag("ForceRadius")) {
+            return;
+        }
+        if (collision.gameObject.CompareTag("Planet")) {
+            return;
+        }
         if (collision.gameObject.TryGetComponent<CollisionHandler>(out CollisionHandler collisionScript)) {
             if (collisionScript.isTransitioning) return;
         }
