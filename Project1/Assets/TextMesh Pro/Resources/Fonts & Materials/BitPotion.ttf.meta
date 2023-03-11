@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 65022bf4362d7184eb2a18586db8e247
+guid: f34d766b0a3dd5a41b7a633e4098c70f
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - monogram
+  - BitPotion
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 2

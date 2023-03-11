@@ -15,16 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleLevel.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 0.unity
+    path: Assets/Scenes/Levels/level 1.unity
     guid: ae380848839b3d44fb95ad1cb60df729
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 1.unity
+    path: Assets/Scenes/Levels/level 2.unity
     guid: ea16a6fe11c8d0f4f85c911e8ddb885d
   - enabled: 1
     path: Assets/Scenes/LevelS/level 3.unity
     guid: 5a54a0b01431521448e109d1e04eb97f
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 4.unity
+    path: Assets/Scenes/Levels/level 3.unity
     guid: adad83d3bebe2954aa838b571988533f
   - enabled: 1
     path: Assets/Scenes/LevelS/level 5.unity
@@ -36,27 +36,27 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelS/level 7.unity
     guid: 82fd76d4ff2fd484e851e872b3850864
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 8.unity
+    path: Assets/Scenes/Levels/level 3.unity
     guid: 6726173156051e741be8ad4b7c7ffa53
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 9.unity
+    path: Assets/Scenes/Levels/level 4.unity
     guid: d113909dbf2deb140ae4b34a1ffe46ed
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 10.unity
+    path: Assets/Scenes/Levels/level 5.unity
     guid: d057e46f9ebda2f4283d91e38f243290
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 11.unity
+    path: Assets/Scenes/Levels/level 6.unity
     guid: b7f00e451c7af2e45a84ae21d9ccf7a7
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 12.unity
+    path: Assets/Scenes/Levels/level 7.unity
     guid: aa7875192ef3642499619bb73edba3e8
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 13.unity
+    path: Assets/Scenes/Levels/level 8.unity
     guid: 0c9b8633e6eb8c64280f07b85b08a754
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 14.unity
+    path: Assets/Scenes/Levels/level 9.unity
     guid: 136f66fe9ba6dfb4bafcf45e264e9d59
   - enabled: 1
-    path: Assets/Scenes/LevelS/level 15.unity
+    path: Assets/Scenes/Levels/level 10.unity
     guid: 899d2d17fc2602542b20b04364df4ded
   m_configObjects: {}
