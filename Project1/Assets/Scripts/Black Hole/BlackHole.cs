@@ -7,14 +7,28 @@ public class BlackHole : MonoBehaviour{
     [SerializeField] float delayTime = 2f;
 
     [SerializeField] AudioClip destroyContact;
-    //[SerializeField] CollisionHandler collisionScript;
     AudioSource audioSourceComponent;
+
+    bool isStartingSequence;
 
     private void Start() {
         audioSourceComponent = GetComponent<AudioSource>();
+        isStartingSequence = false;
+    }
+    private void OnEnable() {
+        EventManager.StartSequence += EnableSequence;
+    }
+    private void OnDisable() {
+        EventManager.StartSequence -= EnableSequence;
+    }
+    void EnableSequence() {
+        isStartingSequence = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
+        if (isStartingSequence == false) {
+            return;
+        }
         if (collision.gameObject.CompareTag("Friendly")) {
             return;
         }
