@@ -29,7 +29,8 @@ public class CollisionHandler : MonoBehaviour{
         }
 
         rocketScreenPosition = Camera.main.WorldToScreenPoint(this.transform.position);
-        isOffScreen = rocketScreenPosition.x >= Screen.width || rocketScreenPosition.y >= Screen.height;
+        isOffScreen = rocketScreenPosition.x > Screen.width || rocketScreenPosition.y > Screen.height
+            || rocketScreenPosition.x < 0 || rocketScreenPosition.y <= 0;
 
         if (isOffScreen) {
             DestroyShip();
@@ -48,6 +49,9 @@ public class CollisionHandler : MonoBehaviour{
         }
         if (collision.gameObject.CompareTag("AlphaJump")) {
             NextLevelSequence();
+            return;
+        }
+        if (collision.gameObject.CompareTag("BlackHole")) {
             return;
         }
         DestroyShip();
@@ -73,7 +77,7 @@ public class CollisionHandler : MonoBehaviour{
         int nextSceneIndex = currentSceneIndex + 1;
         if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) {
             // end of all level, congrat player(s)
-            SceneManager.LoadSceneAsync("level 0");
+            SceneManager.LoadSceneAsync("level 1");
             return;
         }
         print(currentSceneIndex);

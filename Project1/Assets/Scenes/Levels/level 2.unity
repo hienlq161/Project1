@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 660660642}
   m_Layer: 0
   m_Name: Planet
-  m_TagString: Untagged
+  m_TagString: Planet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -766,10 +766,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3323931800595715001, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 9f7c8df3272953f4d9dc300efdafd21e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45b878a404d8af14e9316d88b93ffd63, type: 3}
 --- !u!1001 &727277920037414469
