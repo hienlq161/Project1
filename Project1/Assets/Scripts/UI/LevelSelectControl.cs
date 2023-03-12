@@ -6,7 +6,7 @@ public class LevelSelectControl : MonoBehaviour
 {
     public static LevelSelectControl instance { get; private set; }
     [SerializeField] List<GameObject> lv;
-    public static int lockLv = 7; 
+    public static int lockLv = 9; 
     private void Awake()
     {
         if (instance != null && instance != this) Destroy(this);

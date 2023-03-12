@@ -8,9 +8,7 @@ public class ButtonBeheviour : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         anim = GetComponent<Animator>();
     }
-    private void Update()
-    {
-    }
+  
     public void OnPointerEnter(PointerEventData eventData)
     {
         anim.SetTrigger("Highlighted");
